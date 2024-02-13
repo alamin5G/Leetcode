@@ -1,19 +1,19 @@
-import java.util.Scanner;
+import java.util.HashMap;
 
 public class TwoSum1 {
 
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        int[] arr = {1, 2, 3, 4};
-        int[] indices = twoSum(arr, 4);
-    }
+    public int[] twoSum(int[] nums, int target) {
+        HashMap<Integer, Integer> hasMap = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            Integer numIndex = hasMap.get(nums[i]);
+            if (numIndex != null) {
+                return new int[]{numIndex, i};
+            }
 
-
-    public static int[] twoSum(int[] nums, int target) {
-        int[] pos;
+            hasMap.put(target-nums[i], i);
+        }   
         
-
-        return pos;
+        return nums;
     }
     
 }
