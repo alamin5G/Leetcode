@@ -10,7 +10,7 @@ public class TwoSum1 {
 
 
     public static int[] twoSum(int[] nums, int target) {
-        int[] pos;
+        int[] pos = nums;
         
 
         return pos;
