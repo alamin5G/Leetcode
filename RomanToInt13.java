@@ -1,8 +1,9 @@
 import java.util.HashMap;
 
-class Solution {
-    public int romanToInt(String s) {
-         HashMap<Character, Integer> romanNum = new HashMap<>();
+public class RomanToInt13 {
+    public static int romanToInt(String s) {
+        // remember always remove the static keyword before submission in leetcode.
+        HashMap<Character, Integer> romanNum = new HashMap<>();
         romanNum.put('I', 1);
         romanNum.put('V', 5);
         romanNum.put('X', 10);
@@ -28,5 +29,11 @@ class Solution {
         }
 
         return sum;
+    }
+
+    public static void main(String[] args) {
+        // remember always remove 
+        String romanNum = "XIII"; //ALWAYS CAPITAL LETTER
+        System.out.println("Roman number : " + romanNum + " value in Integer is = " + romanToInt(romanNum));
     }
 }
