@@ -1,32 +1,44 @@
-import java.util.HashMap;
-
 class Solution {
-    public int romanToInt(String s) {
-         HashMap<Character, Integer> romanNum = new HashMap<>();
-        romanNum.put('I', 1);
-        romanNum.put('V', 5);
-        romanNum.put('X', 10);
-        romanNum.put('L', 50);
-        romanNum.put('C', 100);
-        romanNum.put('D', 500);
-        romanNum.put('M', 1000);
+    public String longestCommonPrefix(String[] strs) {
+         //finding the smallest string length from the array 
+         int smallestLength = strs[0].length();
 
-        int sum = 0;
-        int prevValue = 0;
-
-        for (int i = s.length()-1; i >=0; i--) {
-            char c = s.charAt(i);
-            int currentValue = romanNum.get(c);
-
-            if (currentValue < prevValue) {
-                sum -= currentValue;
-            }else{
-                sum += currentValue;
-            }
-            prevValue = currentValue;
-
-        }
-
-        return sum;
-    }
+         for (String string : strs) {
+             if (smallestLength > string.length()) {
+                 smallestLength = string.length();
+             }
+         }
+ 
+         int countt = 0;
+         boolean b = false;
+         String s = "";
+ 
+         for (int i = 0; i < smallestLength; i++) {
+ 
+             char pref = strs[0].charAt(i);
+ 
+             for (int j = 0; j < strs.length; j++) {
+                 
+                 if (pref == strs[j].charAt(i)) {
+                      b = true;
+                 }else{
+                     b = false;
+                     break;
+                 }
+             }
+ 
+             if (b == true) {
+                 s = s + String.valueOf(pref);
+                 countt++;
+             }else{
+                 if (countt>=1) {
+                     return s;
+                 }else{
+                     return "";
+                 }
+             }
+ 
+         }
+         return s;
+     }
 }
