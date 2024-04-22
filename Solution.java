@@ -1,32 +1,39 @@
-import java.util.HashMap;
-
 class Solution {
-    public int romanToInt(String s) {
-         HashMap<Character, Integer> romanNum = new HashMap<>();
-        romanNum.put('I', 1);
-        romanNum.put('V', 5);
-        romanNum.put('X', 10);
-        romanNum.put('L', 50);
-        romanNum.put('C', 100);
-        romanNum.put('D', 500);
-        romanNum.put('M', 1000);
 
-        int sum = 0;
-        int prevValue = 0;
+    public static void main(String[] args) {
+        
+        int max = Integer.MAX_VALUE;
+        int low = Integer.MIN_VALUE;
+        System.out.println("Out : " + reverse(1534236469));
+        System.out.println("Max : " + max);
+        System.out.println("Min : " + low);
+    }
 
-        for (int i = s.length()-1; i >=0; i--) {
-            char c = s.charAt(i);
-            int currentValue = romanNum.get(c);
+    public static int reverse(int x) {
+        
+        int reversedNum = doReverse(x);
 
-            if (currentValue < prevValue) {
-                sum -= currentValue;
-            }else{
-                sum += currentValue;
-            }
-            prevValue = currentValue;
+       return reversedNum;
+        
+    }
 
+    public static int doReverse(int actual){
+
+        long sum = 0;
+        while(actual!=0){
+            int rem = actual % 10;
+            sum = (sum * 10) + rem;
+            actual = actual/10;
         }
 
-        return sum;
+        int max = Integer.MAX_VALUE;
+        int low = Integer.MIN_VALUE;
+
+        if (low <= sum && max>= sum) {
+            return (int) sum;
+        }else{
+            return 0;
+        }
     }
+
 }
