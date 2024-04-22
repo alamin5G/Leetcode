@@ -1,4 +1,5 @@
 class Solution {
+<<<<<<< HEAD
 
     public static void main(String[] args) {
         
@@ -24,8 +25,33 @@ class Solution {
             int rem = actual % 10;
             sum = (sum * 10) + rem;
             actual = actual/10;
-        }
+=======
+    public boolean isPalindrome(int x) {
 
+        String palindrom = Integer.toString(x);
+        int left = 0;
+        int right = palindrom.length()-1;
+
+        boolean b = palindrome(palindrom, left, right);
+
+        return b;
+        
+    }
+
+    public static boolean palindrome(String s, int left, int right){
+
+        if (left >= right) {
+            return true;
+>>>>>>> 31f113f7eb843fd9d94dd506bfbeff7444d28be1
+        }
+        if (isLeftRightMatched(s, left, right)) {
+            return palindrome(s, left+1, right-1);
+        }
+        
+        return false;
+    }
+
+<<<<<<< HEAD
         int max = Integer.MAX_VALUE;
         int low = Integer.MIN_VALUE;
 
@@ -34,6 +60,13 @@ class Solution {
         }else{
             return 0;
         }
+=======
+    public static boolean isLeftRightMatched(String s, int left, int right){
+        if (s.charAt(left) == s.charAt(right)) {
+            return true;
+        }
+        return false;
+>>>>>>> 31f113f7eb843fd9d94dd506bfbeff7444d28be1
     }
 
 }
