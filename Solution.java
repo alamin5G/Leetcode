@@ -1,32 +1,21 @@
-class Solution {
-    public boolean isPalindrome(int x) {
+import java.util.Scanner;
 
-        String palindrom = Integer.toString(x);
-        int left = 0;
-        int right = palindrom.length()-1;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int testCases = scanner.nextInt();
+        while (testCases-- > 0) {
+            long n = scanner.nextLong();
+            long reversedBits = reverseBits(n);
+            System.out.println(reversedBits);
+        }
+        scanner.close();
+    }
 
-        boolean b = palindrome(palindrom, left, right);
-
-        return b;
+    public int reverse(int x) {
         
-    }
 
-    public static boolean palindrome(String s, int left, int right){
-
-        if (left >= right) {
-            return true;
-        }
-        if (isLeftRightMatched(s, left, right)) {
-            return palindrome(s, left+1, right-1);
-        }
-        
-        return false;
     }
-
-    public static boolean isLeftRightMatched(String s, int left, int right){
-        if (s.charAt(left) == s.charAt(right)) {
-            return true;
-        }
-        return false;
-    }
+   
+    
 }
