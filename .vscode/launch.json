@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Solution",
+            "request": "launch",
+            "mainClass": "Solution",
+            "projectName": "Leetcode_5602c19b"
+        },
+        {
+            "type": "java",
             "name": "ValidParentheses20",
             "request": "launch",
             "mainClass": "ValidParentheses20",
