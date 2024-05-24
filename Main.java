@@ -7,6 +7,7 @@ public class Main {
 
         System.out.println("Enter values between 1 and 9 (enter 0 to stop):");
         int value = scanner.nextInt();
+        
 
         // Read values until 0 is entered
         while (value != 0) {

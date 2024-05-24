@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "RecursionPalindrome",
+            "request": "launch",
+            "mainClass": "RecursionPalindrome",
+            "projectName": "Leetcode_b05660f0"
+        },
+        {
+            "type": "java",
+            "name": "MyClassTest",
+            "request": "launch",
+            "mainClass": "MyClassTest",
+            "projectName": "Leetcode_b05660f0"
+        },
+        {
+            "type": "java",
             "name": "Solution",
             "request": "launch",
             "mainClass": "Solution",
