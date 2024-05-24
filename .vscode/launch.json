@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "RecursionFibonacci",
+            "request": "launch",
+            "mainClass": "RecursionFibonacci",
+            "projectName": "Leetcode_b05660f0"
+        },
+        {
+            "type": "java",
             "name": "RecursionPalindrome",
             "request": "launch",
             "mainClass": "RecursionPalindrome",
